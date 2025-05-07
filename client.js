@@ -14,7 +14,7 @@ const helpMsg = 'Usage:\nhyperssh ?-i identity.json ?-s peer_key ?-u username ?-
 
 if (argv.help) {
   console.log(helpMsg)
-  process.exit(-1)
+  process.exit(0)
 }
 
 const conf = {}
@@ -30,7 +30,7 @@ if (!conf.keepAlive) {
 const peer = conf.peer
 if (!peer) {
   console.error('Error: peer is invalid')
-  process.exit(-1)
+  process.exit(1)
 }
 
 const sshCommand = argv.e || ''
@@ -50,7 +50,7 @@ if (argv.i) {
 
   if (!keyPair) {
     console.error('Error: identity file invalid')
-    process.exit(-1)
+    process.exit(1)
   }
 
   keyPair = libKeys.parseKeyPair(keyPair)
