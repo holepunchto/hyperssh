@@ -4,9 +4,9 @@ SSH and SSHFS over the [Hyperswarm DHT](https://github.com/holepunchto/hyperdht)
 
 ## Installation
 ```
-npm install -g hyperssh // ssh / fuse client stubs
-npm install -g hypertele // hyperswarm server proxy
-npm install -g hyper-cmd-utils // keygen utils
+npm install -g hyperssh # ssh / fuse client stubs
+npm install -g hypertele # hyperswarm server proxy
+npm install -g hyper-cmd-utils # keygen utils
 ```
 
 ## Usage
